@@ -7,7 +7,6 @@ import TrainerPortal from './components/TrainerPortal';
 import ClassRepPortal from './components/ClassRepPortal';
 import { IQAPortal } from './components/IQAPortal';
 import HODPortal from './components/HODPortal';
-import UserSwitcher from './components/UserSwitcher';
 import Login from './components/Login';
 import Header from './components/Header';
 import { motion, AnimatePresence } from 'motion/react';
@@ -88,12 +87,11 @@ const App: React.FC = () => {
   };
 
   return (
-    <main className="min-h-screen bg-[#fafbfc] flex items-center justify-center p-4 pb-32">
+    <main className="min-h-screen bg-[#fafbfc] flex items-center justify-center p-4">
       <Header />
       <AnimatePresence mode="wait">
         {renderContent()}
       </AnimatePresence>
-      <UserSwitcher />
     </main>
   );
 };
